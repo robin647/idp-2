@@ -1,0 +1,145 @@
+.home-page {
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.home-header {
+  background-color: #007BFF;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.home-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.home-header nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  padding: 300px 20px;
+  background-image: url('./images/cover.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Cards Section */
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.details div {
+  flex: 1 1 280px;
+  margin: 10px;
+  text-align: left;
+}
+
+.details h3 {
+  color: #007BFF;
+  margin-bottom: 10px;
+}
+
+#about, #contact {
+  padding: 40px 20px;
+  background-color: #f9fafb;
+}
+
+#about h2, #contact h2 {
+  font-size: 2rem;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+}
+
+/* Responsive Media Queries */
+
+@media (max-width: 768px) {
+  .home-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-header nav {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details div {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .home-header h1 {
+    font-size: 1.5rem;
+  }
+}
