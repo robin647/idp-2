@@ -34,7 +34,7 @@ function SignupPage() {
       .then(data => {
         alert(data.message);
         if (data.message === 'Signup successful') {
-          navigate('/login'); // signup success — login page e pathabe
+          navigate('/'); // signup success — login page e pathabe
         }
       })
       .catch(error => {
