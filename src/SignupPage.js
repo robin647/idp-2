@@ -23,7 +23,7 @@ function SignupPage() {
     e.preventDefault();
 
     // POST request to backend API
-    fetch('https://uniassist.onrender.com/api/auth/signup', {
+    fetch('http://localhost:5000/api/auth/signup', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(formData)

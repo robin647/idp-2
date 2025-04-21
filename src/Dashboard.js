@@ -2,6 +2,9 @@ import React from 'react';
 import './Dashboard.css';
 
 function Dashboard() {
+  const userName = localStorage.getItem('name');
+  const today = new Date().toLocaleDateString();
+
   return (
     <div className="dashboard">
       {/* Sidebar */}
@@ -33,8 +36,8 @@ function Dashboard() {
       {/* Main Content */}
       <main className="main-content">
         <div className="header">
-          <h3>👋 Welcome, Shahidul!</h3>
-          <span>📅 12 Jan 2024, Friday</span>
+          <h3>👋 Welcome, {userName}!</h3>
+          <span>📅 {today}</span>
         </div>
 
         <div className="dashboard-banner">

@@ -32,7 +32,8 @@ router.post('/login', async (req, res) => {
   if (!isMatch) return res.status(400).json({ message: 'Incorrect password' });
 
   const token = jwt.sign({ id: user._id }, 'secretKey', { expiresIn: '1h' });
-  res.json({ message: 'Login successful', token });
+  res.json({ message: 'Login successful', token, name: user.name });
+
 });
 
 module.exports = router;

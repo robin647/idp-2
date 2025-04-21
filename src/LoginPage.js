@@ -12,7 +12,7 @@ function LoginPage() {
     e.preventDefault();
 
     // POST request to backend API
-    fetch('https://uniassist.onrender.com/api/auth/login', {
+    fetch('http://localhost:5000/api/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -24,6 +24,7 @@ function LoginPage() {
         if (data.token) {
           // token localStorage e store kora
           localStorage.setItem('token', data.token);
+          localStorage.setItem('name',data.name);
           alert('Login Successful!');
           navigate('/dashboard'); // dashboard e pathabe
         } else {
