@@ -12,7 +12,7 @@ function LoginPage() {
     e.preventDefault();
 
     // POST request to backend API
-    fetch('http://localhost:5000/api/auth/login', {
+    fetch('https://uniassist.onrender.com/api/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
