@@ -21,7 +21,7 @@ function LoginPage() {
       .then(data => {
         if (data.token) {
           localStorage.setItem('token', data.token);
-          localStorage.setItem('name', data.name); // যদি API থেকে name আসে
+          localStorage.setItem('name', data.name); 
           alert('Login Successful!');
           navigate('/dashboard');
         } else {
