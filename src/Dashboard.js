@@ -36,7 +36,7 @@ function Dashboard() {
       {/* Main Content */}
       <main className="main-content">
         <div className="header">
-          <h3>👋 Welcome, {userName}!</h3>
+          <h2>👋 Welcome, {userName}!</h2>
           <span>📅 {today}</span>
         </div>
 
