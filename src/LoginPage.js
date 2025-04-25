@@ -7,12 +7,10 @@ function LoginPage() {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  // login button click handler
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // POST request to backend API
-    fetch('http://localhost:5000/api/auth/login', {
+    fetch(`${process.env.REACT_APP_API_URL}/api/auth/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -22,11 +20,10 @@ function LoginPage() {
       .then(res => res.json())
       .then(data => {
         if (data.token) {
-          // token localStorage e store kora
           localStorage.setItem('token', data.token);
-          localStorage.setItem('name',data.name);
+          localStorage.setItem('name', data.name); // যদি API থেকে name আসে
           alert('Login Successful!');
-          navigate('/dashboard'); // dashboard e pathabe
+          navigate('/dashboard');
         } else {
           alert(data.message);
         }
@@ -59,7 +56,7 @@ function LoginPage() {
           <button type="submit">Login</button>
         </form>
         <p className="signup-link">
-          Don’t have an account? <a href="/signup">Sign up</a>
+          Don't have an account? <a href="/signup">Sign up</a>
         </p>
       </div>
     </div>
